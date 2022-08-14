@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--Este código foi elaborado encima do código feito por Gabriel Custódio. Ele foi idealizado para o desafio do Módulo IV do Tech Academy-->
+<!--Alterações no código original constam: 
+    Adições na tag head: adição das tags meta keyword, author e description
+    Removação de alguns divs
+    Adição das tags nav, section, figure, article e footer 
+    Adiçaõ de comentários para explicar o conteúdo de cada seção-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Este é o site desenvolvido para o Desafio TechAcademy Módulo IV">
+    <meta name="keywords" content="Cores, poema, TechAcademy">
+    <meta name="author" content="Lucas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleChallenge1.css">
+    <title>Um poema de cada cor</title>
+</head>
+
+<body>
+    <!--Menu de Navegação Fixo para seções específicas de cada texto-->
+    <nav id="menuNavigation">
+        <a href="#contentRed" type="button" class="buttonNavigation" id="buttonRed">
+            Vermelho
+        </a>
+        <a href="#contentOrange" type="button" class="buttonNavigation" id="buttonOrange">
+            Laranja
+        </a>
+        <a href="#contentYellow" type="button" class="buttonNavigation" id="buttonYellow">
+            Amarelo
+        </a>
+        <a href="#contentGreen" type="button" class="buttonNavigation" id="buttonGreen">
+            Verde
+        </a>
+        <a href="#contentBlue" type="button" class="buttonNavigation" id="buttonBlue">
+            Azul
+        </a>
+        <a href="#contentViolet" type="button" class="buttonNavigation" id="buttonViolet">
+            Violeta
+        </a>
+    </nav>
+
+    <!--Apresentação do Site-->
+    <header id="presentation">
+        <div class="presentation container">
+            <section>
+                <h1>Vamos ler poemas<span></span></h1>
+                <h1>sobre as... <span></span></h1>
+                <h1>cores<em></em><span></span></h1>
+                <a href="#portfolio" type="button" class="cta">Seção de Poemas</a>
+            </section>
+        </div>
+    </header>
+
+    <!--Cabeçalho-->
+    <main id="portfolio">
+        <div class="portfolio container">
+            <header class="portfolio header">
+                <h1 class="section-title"><span>Poemas</span></h1>
+            </header>
+            <div class="all-projects">
+
+                <!--Poema sobre a cor Vermelha-->
+                <article class="project-content">
+                    <section class="project-description">
+                        <h1 id="contentRed">Vermelho</h1>
+                        <h2>A cor da paixão</h2> <br>
+                        <p>De paixão,</p> <br>
+                        <p>o vermelho cobre a população.</p> <br>
+                        <p>Cheguei à conclusão</p> <br>
+                        <p>que o vermelho é minha representação.</p>
+                    </section>
+                    <figure class="project-img">
+                        <img src="./red.jpg" alt="Imagem de uma rosa vermelha">
+                    </figure>
+                </article>
+
+                <!--Poema sobre a cor Laranja-->
+                <article class="project-content">
+                    <section class="project-description">
+                        <h1 id="contentOrange">Laranja</h1>
+                        <h2>Sobre laranjas</h2> <br>
+                        <p>O homem olhou-me exaltado:</p> <br>
+                        <p>Sua alegria, qual o significado?</p> <br>
+                        <p>Olhei para ele, em minhas mãos uma laranja</p> <br>
+                        <p>sou feliz de compartilhar-te uma laranja.</p>
+                    </section>
+                    <figure class="project-img">
+                        <img src="./orange.jpg" alt="Imagem de duas laranjas">
+                    </figure>
+                </article>
+
+                <!--Poema sobre a cor Amarela-->
+                <article class="project-content">
+                    <section class="project-description">
+                        <h1 id="contentYellow">Amarelo</h1>
+                        <h2>Toque da vida</h2> <br>
+                        <p>Vi uma mulher no parque</p> <br>
+                        <p>braços abertos tocando o céu.</p> <br>
+                        <p>Perguntei o que estava fazendo com esse toque.</p> <br>
+                        <p>Disse-me estar tocando o trófeu para nós.</p>
+                    </section>
+                    <figure class="project-img">
+                        <img src="./yellow.jpg" alt="Imagem de vários girassóis amarelos">
+                    </figure>
+                </article>
+
+                <!--Poema sobre a cor Verde-->
+                <article class="project-content">
+                    <section class="project-description">
+                        <h1 id="contentGreen">Verde</h1>
+                        <h2>Vida sob nossos pés</h2> <br>
+                        <p>Em meus pés, sinto a vida.</p> <br>
+                        <p>Árvore, explica-me porque nasci neste década.</p> <br>
+                        <p>Saí com zero respostas sobre a vida.</p> <br>
+                        <p>É, será uma longa jornada.</p>
+                    </section>
+                    <figure class="project-img">
+                        <img src="./green.jpg" alt="Imagem de vários trevos de 4 folhas">
+                    </figure>
+                </article>
+
+                <!--Poema sobre a cor Azul-->
+                <article class="project-content">
+                    <section class="project-description">
+                        <h1 id="contentBlue">Azul</h1>
+                        <h2>Entre céu e água </h2> <br>
+                        <p>Que oceano tão lindo!</p> <br>
+                        <p>Que água tão pura!</p> <br>
+                        <p>Que céu tão estrelado</p> <br>
+                        <p>Muito obrigado!</p>
+                    </section>
+                    <figure class="project-img">
+                        <img src="./blue.jpg" alt="Imagem de céu azulado com nuvens brancas">
+                    </figure>
+                </article>
+
+                <!--Poema sobre a cor Violeta-->
+                <article class="project-content">
+                    <section class="project-description">
+                        <h1 id="contentViolet">Violeta</h1>
+                        <h2>Elegância e inveja</h2> <br>
+                        <p>Outro dia, vi uma violeta</p> <br>
+                        <p>cada pétala tão bonita.</p> <br>
+                        <p>Confesso que quero arrancar cada uma delas</p> <br>
+                        <p>para que eu fique tão bonito como elas.</p>
+                    </section>
+                    <figure class="project-img">
+                        <img src="./violet.jpg" alt="Imagem de campo de violetas">
+                    </figure>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!--Rodapé: Direitos autorais-->
+    <footer id="copyrights">
+        2022. Este site foi feito a partir do código provido por TechAcademy, realizado por Gabriel Custódio. Todos os
+        direitos reservados ao TechAcademy.
+    </footer>
+</body>
+
+</html>

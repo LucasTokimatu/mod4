@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200;1,500&display=swap');
+/*Este código foi elaborado encima do código elaborado por Gabriel Custódio. As principais modificações realizadas foram:
+    Adição de comentários para fins de organização divididos em 6 seções principais;
+    Adição da animação keyframes na palavra CORES;
+    Modificação da animação do botão no cabeçalho.
+*/
+
+/*1)Seção de seleção com apenas 1 elemento*/
+    /* 1.1)Seletores de elementos */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'Poppins', 'Times New Roman', Times, serif ;
+    scroll-behavior: smooth;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+p {
+    font-size: 1.6rem;
+    margin-top: 5px;
+    margin-left: auto; /*centralizar um elemento inteiro e não só o texto*/
+    margin-right: auto;
+    text-align: center;
+    line-height: 1.5rem;
+    font-weight: 200;
+    letter-spacing: 0.05rem;
+}
+
+    /* 1.2)Seletores de classes */
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0px;
+}
+.section-title {
+    font-size: 4rem;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+    /*1.3)Seletores de identificadores */
+#sections{
+    text-align: center;
+}
+#copyrights {
+    clear: both;
+    margin-left: 5%;
+}
+#contentRed {
+    color: rgb(204, 74, 13); /*Muda cor do texto*/
+}
+#contentOrange {
+    color: rgb(161 110 33); /*Muda cor do texto*/
+}
+#contentYellow {
+    color: rgb(236, 222, 16); /*Muda cor do texto*/
+}
+#contentGreen {
+    color: rgb(27, 158, 9); /*Muda cor do texto*/
+}
+#contentBlue {
+    color: rgb(13, 32, 204); /*Muda cor do texto*/
+}
+#contentViolet {
+    color: rgb(136, 14, 110); /*Muda cor do texto*/
+}
+
+
+/*2)Menu de Navegação Fixo*/
+/*2.1)Configuração da caixa inteira do menu de Navegação*/
+#menuNavigation {
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    position:fixed;
+    top: 0;
+    width:100%;
+    z-index: 100;
+}
+a.buttonNavigation{
+    text-decoration: none;
+    color:inherit;
+}
+#menuNavigation .buttonNavigation {
+    background-color: green;
+    color:white;
+    border: 2px solid black;
+    font-weight: 200;
+    font-size: 2rem;
+    text-align:center;
+    display: inline-block;
+    width:auto;
+    height: 40px;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+ /*2.2)Configuração de cada botão de navegação fixo individualmente*/
+#menuNavigation #buttonRed {
+    background-color: rgb(204, 74, 13);
+    padding: 5px;
+    margin-right: 2px;
+    font-weight: 200;
+    font-size: 2rem;
+    text-align:center;
+}
+#menuNavigation #buttonOrange {
+    background-color: rgb(223, 140, 15);
+    padding: 5px;
+    margin-right: 2px;
+    font-weight: 200;
+    font-size: 2rem;
+    text-align:center;
+}
+#menuNavigation #buttonYellow {
+    background-color: rgb(236, 222, 16);
+    padding: 5px;
+    margin-right: 2px;
+    font-weight: 200;
+    font-size: 2rem;
+    text-align:center;
+}
+#menuNavigation #buttonGreen {
+    background-color: rgb(27, 158, 9);
+    padding: 5px;
+    margin-right: 2px;
+    font-weight: 200;
+    font-size: 2rem;
+    text-align:center;
+}
+#menuNavigation #buttonBlue {
+    background-color: rgb(13, 32, 204);
+    padding: 5px;
+    margin-right: 2px;
+    font-weight: 200;
+    font-size: 2rem;
+    text-align:center;
+}
+#menuNavigation #buttonViolet {
+    background-color: rgb(136, 14, 110);
+    padding: 5px;
+    margin-right: 2px;
+    font-weight: 200;
+    font-size: 2rem;
+    text-align:center;
+}
+
+ /*2.3)Configuração dos botões de navegação fixo quando mouse é colocado encima individualmente*/
+#menuNavigation .buttonNavigation:hover {
+    color:black;
+}
+#menuNavigation #buttonRed:hover {
+    background-color: hsl(19, 88%, 70%);
+}
+#menuNavigation #buttonOrange:hover {
+    background-color: hsl(36, 87%, 70%);
+}
+#menuNavigation #buttonYellow:hover {
+    background-color: hsl(56, 87%, 70%);
+}
+#menuNavigation #buttonGreen:hover {
+    background-color: hsl(113, 89%, 70%);
+}
+#menuNavigation #buttonBlue:hover {
+    background-color: hsl(234, 88%, 70%);
+}
+#menuNavigation #buttonViolet:hover {
+    background-color: hsl(313, 81%, 70%);
+}
+
+
+/*3)Seção de apresentação/introdução do site */
+#presentation{
+    background-image: url(./backgroundRainbow.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#presentation h1{
+    overflow: hidden;
+    display: block;
+    width: fit-content;
+    font-size: 5rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+    margin: 0 auto;
+}
+#presentation h1:nth-child(1){
+    animation-delay: .8s;
+}
+#presentation h1:nth-child(2){
+    animation-delay: 1.8s;
+}
+#presentation h1:nth-child(3){
+    text-transform: uppercase;
+    animation-delay: 2.8s;
+    animation: change_color_animation_title 8s infinite;
+}
+#presentation .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: skyblue;
+    background-color: transparent;
+    border: 2px solid skyblue;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 20px;
+    margin-left: 25%;
+    transition: .5s ease;
+    transition-property: background-color, color;
+}
+#presentation .cta:hover{
+    color: white;
+    font-weight: 500;
+    border: 2px solid white;
+    background-image: linear-gradient(90deg, #c41e18 0%, rgb(180, 121, 11) 14.29%, rgb(170, 170, 4) 28.58%, rgb(90, 146, 6) 42.87%, rgba(3, 129, 172, 0.493) 57.16%, rgba(1, 1, 158, 0.733) 71.45%, rgba(46, 185, 173, 0.527) 85.47% ,rgba(196, 2, 255, 0.897) 100%);
+}
+#presentation h1 span{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 0%;
+    animation-delay: .5s;
+    background-color: gold;
+}
+#presentation h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+#presentation h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+#presentation h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+#presentation::after{
+    content: '';
+    position: absolute;
+    left:0;
+    top: 0;
+    height:100%;
+    width: 100%;
+    background-color:black;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+
+/*4)Seção dos poemas-corpo do site */
+    /*4.1)Configuração do texto/poemas escritos no corpo do site*/
+#portfolio .portfolio{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+    padding-bottom: 0;
+}
+#portfolio .portfolio-header h1{
+    margin-bottom: 50px;
+}
+#portfolio .all-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#portfolio .project-content{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#portfolio .project-description {
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, #c41e18 0%, rgb(180, 121, 11) 14.29%, rgb(170, 170, 4) 28.58%, rgb(159, 177, 133) 42.87%, rgba(3, 129, 172, 0.493) 57.16%, rgba(150, 150, 182, 0.733) 71.45%, rgba(238, 130, 238, 0.274) 85.47% ,rgba(173, 127, 135, 0.507) 100%);
+    color: white;
+}
+#portfolio .project-description h1{
+    font-size: 4rem;
+    font-weight: 1500;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-left: auto; /*centralizar um elemento inteiro e não só o texto*/
+    margin-right: auto;
+}
+#portfolio .project-description h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-left: auto; /*centralizar um elemento inteiro e não só o texto*/
+    margin-right: auto;
+}
+
+    /*4.2)Configuração das imagens no corpo do site*/
+#portfolio .project-img {
+    flex-basis: 50%;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+#portfolio .project-img:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #e9e9e9 0%, #e9e9e9 100%);
+    opacity: 0.3;
+}
+#portfolio .project-img img{
+    transition: 0.5s ease transform;
+}
+#portfolio .project-content:hover .project-img img{
+    transform: scale(1.5,1.5);
+}
+
+
+/*5)Keyframes */
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+@keyframes change_color_animation_title {
+    0% { color: red; } 
+    14.29% { color: orange;}
+    28.58% { color: yellow; }
+    42.87% { color: greenyellow; }
+    57.16% { color: lightblue; }
+    71.45% { color: blue; }
+    85.74% { color: violet; }
+    100% { color: red; }
+}
+
+
+/*6)Media Query */
+@media only screen and (min-width: 768px) {
+    #portfolio .project-content {
+        flex-direction: row;
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #portfolio .all-projects .project-description{
+        height: 100%
+    }
+    #portfolio .all-projects .project-img{
+        height: 100%
+    }
+    #portfolio .project-content:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+}
